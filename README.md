@@ -21,7 +21,7 @@ ViewsCounter插件用于记录单篇文章浏览次数、获取浏览最多文�
     
 3. 在Typecho后台点击启用并进行相关设置如下图：
 
-    <img src="https://github.com/mierhuo/ViewsCounter/blob/master/config_example.png?raw=true" alt="配置设置例子">
+    <img src="https://raw.githubusercontent.com/mierhuo/Typecho-ViewsCounter/master/config_example.png" alt="配置设置例子">
 
 ## 主题调用插件方法
 
