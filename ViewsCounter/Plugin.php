@@ -18,7 +18,8 @@ class ViewsCounter_Plugin implements Typecho_Plugin_Interface
     public static function activate()
     {
         Typecho_Plugin::factory('Widget_Archive')->beforeRender = array(
-            'ViewsCounter_Plugin', 'count'
+            'ViewsCounter_Plugin',
+            'count'
         );
 
         // 修改contents表，添加views字段
@@ -160,6 +161,11 @@ class ViewsCounter_Plugin implements Typecho_Plugin_Interface
                 ->order('views', Typecho_Db::SORT_DESC)
                 ->limit($limit)
         );
-        return $posts;
+        // 包装更完善的信息输入
+        $popular_list = [];
+        foreach ($posts as $post) {
+            $popular_list[] = Typecho_Widget::widget('Widget_Abstract_Contents')->push($post);
+        }
+        return $popular_list;
     }
 }
