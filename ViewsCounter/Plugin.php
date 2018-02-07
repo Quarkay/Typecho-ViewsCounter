@@ -85,14 +85,15 @@ class ViewsCounter_Plugin implements Typecho_Plugin_Interface
      * 执行统计过程
      *
      * @access public
+     * @param Widget_Archive $archive_obj
      * @return void
      * @throws  Typecho_Exception
      */
-    public static function count()
+    public static function count($archive_obj)
     {
         // 仅对文章进行统计
-        if (Typecho_Widget::widget('Widget_Archive')->is('single')) {
-            $cid = Typecho_Widget::widget('Widget_Archive')->cid;
+        if ($archive_obj->is('single')) {
+            $cid = $archive_obj->cid;
             $key = '__viewsCounter';
             $cids = Typecho_Cookie::get($key);
             $cookie_time = Typecho_Widget::widget('Widget_Options')
