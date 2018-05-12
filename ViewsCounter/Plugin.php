@@ -5,7 +5,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
  *
  * @package ViewsCounter
  * @author  Huspy
- * @version 0.1.0
+ * @version 1.0.0
  * @link https://www.mierhuo.com
  */
 class ViewsCounter_Plugin implements Typecho_Plugin_Interface
@@ -91,6 +91,11 @@ class ViewsCounter_Plugin implements Typecho_Plugin_Interface
      */
     public static function count($archive_obj)
     {
+        // 若已登录不执行统计操作
+        if (Typecho_Widget::widget('Widget_User')->hasLogin()) {
+            return;
+        }
+        
         // 仅对文章进行统计
         if ($archive_obj->is('single')) {
             $cid = $archive_obj->cid;
