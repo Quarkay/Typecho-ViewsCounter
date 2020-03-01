@@ -4,9 +4,9 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
  * 文章浏览量统计插件，可设置对同一篇文章的多次浏览行为是否计入浏览量的时间间隔。
  *
  * @package ViewsCounter
- * @author  Huspy
+ * @author  Quarkay
  * @version 1.0.0
- * @link https://www.mierhuo.com
+ * @link https://www.quarkay.com
  */
 class ViewsCounter_Plugin implements Typecho_Plugin_Interface
 {

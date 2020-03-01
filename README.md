@@ -10,7 +10,7 @@ ViewsCounter 插件用于记录 Typecho 每篇文章的浏览次数（可设置�
 1. 首先将本项目克隆到本地：
 
     ```bash
-    git clone git@github.com:mierhuo/Typecho-ViewsCounter.git
+    git clone git@github.com:Quarkay/Typecho-ViewsCounter.git
     ```
 
 2. 将子文件夹 ViewsCounter 复制到 Typecho 插件目录
@@ -21,7 +21,7 @@ ViewsCounter 插件用于记录 Typecho 每篇文章的浏览次数（可设置�
     
 3. 在Typecho后台点击启用并进行相关设置如下图：
 
-    <img src="https://raw.githubusercontent.com/mierhuo/Typecho-ViewsCounter/master/config_example.png" alt="配置设置例子">
+    <img src="https://raw.githubusercontent.com/Quarkay/Typecho-ViewsCounter/master/config_example.png" alt="配置设置例子">
 
 ## 主题调用插件方法
 
@@ -101,4 +101,4 @@ ViewsCounter 插件用于记录 Typecho 每篇文章的浏览次数（可设置�
     
 ## License
 
-<a href="https://github.com/mierhuo/Typecho-SimpleCDN/blob/master/LICENSE.txt">The GNU General Public License (GPL) V2</a>
+<a href="https://github.com/Quarkay/Typecho-SimpleCDN/blob/master/LICENSE.txt">The GNU General Public License (GPL) V2</a>
