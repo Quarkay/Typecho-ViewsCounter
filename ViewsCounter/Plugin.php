@@ -105,7 +105,7 @@ class ViewsCounter_Plugin implements Typecho_Plugin_Interface
                     ->plugin('ViewsCounter')->cookie_time + 0;
 
             // 仅对新访问的文章进行统计更新，否则直接返回不执行任何操作
-            if (!(is_null($cids) || !in_array("${cid}", explode(',', $cids)))) {
+            if (!(is_null($cids) || !in_array("{$cid}", explode(',', $cids)))) {
                 return;
             }
 
