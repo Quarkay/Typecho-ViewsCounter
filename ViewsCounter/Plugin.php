@@ -131,6 +131,22 @@ class ViewsCounter_Plugin implements Typecho_Plugin_Interface
     }
 
     /**
+     * 获取文章浏览次数的接口，传入 cid
+     *
+     * @access public
+     * @return int
+     * @throws
+     */
+    public static function getViewsById($cid)
+    {
+        $db = Typecho_Db::get();
+        $row = $db->fetchRow(
+            $db->select('views')->from('table.contents')->where('cid = ?', $cid)
+        );
+        return $row['views'];
+    }
+
+    /**
      * 获取文章浏览次数的接口，用于在主题中直接调用
      *
      * @access public
@@ -139,12 +155,7 @@ class ViewsCounter_Plugin implements Typecho_Plugin_Interface
      */
     public static function getViews()
     {
-        $db = Typecho_Db::get();
-        $cid = Typecho_Widget::widget('Widget_Archive')->cid;
-        $row = $db->fetchRow(
-            $db->select('views')->from('table.contents')->where('cid = ?', $cid)
-        );
-        return $row['views'];
+        return self::getViewsById(Typecho_Widget::widget('Widget_Archive')->cid);
     }
 
     /**

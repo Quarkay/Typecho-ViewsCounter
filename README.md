@@ -32,6 +32,8 @@ ViewsCounter 插件用于记录 Typecho 每篇文章的浏览次数（可设置�
     ```php
     // ... context ...
     <?php echo ViewsCounter_Plugin::getViews(); ?> Views
+    // 也可以传入 cid 使用如下
+    <?php echo ViewsCounter_Plugin::getViewsById($this->cid); ?> Views
     // ... context ...
     ```
 
